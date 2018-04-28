@@ -7,6 +7,8 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/bubblemelon/my-pet-go/api"
 )
 
 func main() {
@@ -16,7 +18,9 @@ func main() {
 	// tells the http package to handle all requests to the web root ("/") with AllRequestHandler.
 	http.HandleFunc("/", RootRequestHandler)
 
-	http.HandleFunc("/echo", QueryEchoHandler)
+	http.HandleFunc("/api/echo", api.QueryEchoHandler)
+
+	http.HandleFunc("/api/plants", api.PlantHandler)
 
 	fmt.Printf("HTTP Server Awakens\n")
 
@@ -95,25 +99,4 @@ func RootRequestHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Shows on index page
 	fmt.Fprintf(w, "Written in GO")
-}
-
-// QueryEchoHandler handles API echos and places echos on the webpage
-func QueryEchoHandler(w http.ResponseWriter, r *http.Request) {
-
-	// save the first Query parameter from URL
-	// name the parameter as q on URL
-	query := r.URL.Query()["q"][0]
-
-	// shows on terminal
-	if len(query) != 0 {
-
-		fmt.Println("Query asked: " + query)
-
-	} else {
-
-		fmt.Println("Empty Query Entery")
-	}
-
-	w.Header().Add("Content-Type", "text/plain")
-	fmt.Fprintf(w, query)
 }

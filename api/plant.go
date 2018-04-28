@@ -3,6 +3,7 @@ package api
 import (
 	"encoding/json"
 	"log"
+	"net/http"
 )
 
 // Plant properties
@@ -58,4 +59,19 @@ func FromJSON(jsonData []byte) Plant {
 	}
 
 	return plant
+}
+
+// Should request from redis
+// instead of using test data named testPlant
+
+// PlantHandler handles requests for the plant data api
+func PlantHandler(w http.ResponseWriter, r *http.Request) {
+
+	// test data named testPlant
+	testPlant := &Plant{Name: "Brinjal", Description: "Purple longish fruit.", Kind: "Fruit", Amount: "5"}
+
+	jsonTestPlants := testPlant.ToJSON()
+
+	w.Header().Add("Content-Type", "application/json; charset=utf-8")
+	w.Write(jsonTestPlants)
 }
