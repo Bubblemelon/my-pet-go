@@ -34,7 +34,7 @@ func main() {
 	http.HandleFunc("/api/plants", api.PlantsHandler)
 
 	// retrive plant by name, update, delete
-	http.HandleFunc("api/plant/", api.PlantSpecificHandler)
+	http.HandleFunc("api/plant", api.PlantSpecificHandler)
 
 	fmt.Printf("HTTP Server Awakens\n")
 
@@ -112,7 +112,7 @@ func RootRequestHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Request Succeeded")
 
 	// Shows on index page
-	fmt.Fprintf(w, "Plants API Database written in GO + Redis")
+	fmt.Fprintf(w, "<h1>Plants API Database written in GO + Redis</h1>")
 
 }
 

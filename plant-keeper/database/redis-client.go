@@ -1,6 +1,8 @@
 package database
 
-import "github.com/gomodule/redigo/redis"
+import (
+	"github.com/gomodule/redigo/redis"
+)
 
 // RedisConnection connects to the Redis server
 // and returns the connect of type redis.Conn
@@ -15,3 +17,5 @@ func RedisConnection() redis.Conn {
 	return c
 
 }
+
+

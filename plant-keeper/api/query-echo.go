@@ -18,8 +18,9 @@ func QueryEchoHandler(w http.ResponseWriter, r *http.Request) {
 	// if len(query) != 0
 	if query == "" {
 
-		query = "Your Query was not specified"
+		query = "Your Query was not specified\n"
 
+		// prints on terminal
 		fmt.Println("Query entry is empty")
 		// http://localhost:5050/api/echo?q
 		// http://localhost:5050/api/echo?q=
@@ -36,5 +37,7 @@ func QueryEchoHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Add("Content-Type", "text/plain")
+
+	// prints on browser (i.e. prints on where request was sent from)
 	fmt.Fprintf(w, query)
 }

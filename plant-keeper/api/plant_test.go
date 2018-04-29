@@ -11,7 +11,7 @@ func TestToJSON(t *testing.T) {
 	// create a plant variable of Plant struct type
 	plant := Plant{Name: "Ginger", Description: "A yellow root herb.", Kind: "Tuberous", Amount: "1"}
 
-	plantJSON := plant.ToJSON()
+	plantJSON := ToJSON(plant)
 
 	// t error, the expected string value to match with, plantJSON, error message
 	assert.Equal(t, `{"name":"Ginger","description":"A yellow root herb.","kind":"Tuberous","amount":"1"}`, string(plantJSON), "JSON Marshalling Error")
