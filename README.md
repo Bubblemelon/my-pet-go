@@ -9,3 +9,7 @@ A Plant database logger with API calls.
 
 [Server-Template](https://github.com/Bubblemelon/my-pet-go/tree/master/server-termplate)  
 A simple HTTP Server that Routes to specific pages and handles different HTTP requests.  
+
+Tutorials To Do:   
+
+- [ ] [https://golang.org/doc/articles/wiki/](https://golang.org/doc/articles/wiki)  
