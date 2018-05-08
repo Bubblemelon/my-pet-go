@@ -14,4 +14,6 @@ Tutorials To Do:
 
 - [ ] [https://golang.org/doc/articles/wiki/](https://golang.org/doc/articles/wiki)  
 
-- [ ] Lynda Microservices part 1
+- [ ] [Lynda Microservices part 1](https://www.lynda.com/MyPlaylist/Watch/16095925/682809?autoplay=true)
+
+- [ ] [Lynda Microservices part 2](https://www.lynda.com/MyPlaylist/Watch/16095925/683038?autoplay=true)
