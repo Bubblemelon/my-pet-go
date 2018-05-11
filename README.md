@@ -16,4 +16,6 @@ Tutorials To Do:
 
 - [ ] [Lynda Microservices part 1](https://www.lynda.com/MyPlaylist/Watch/16095925/682809?autoplay=true)
 
-- [ ] [Lynda Microservices part 2](https://www.lynda.com/MyPlaylist/Watch/16095925/683038?autoplay=true)
+- [ ] [Lynda Microservices part 2](https://www.lynda.com/MyPlaylist/Watch/16095925/683038?autoplay=true)  
+
+- [ ] check http package docs
