@@ -19,3 +19,5 @@ Tutorials To Do:
 - [ ] [Lynda Microservices part 2](https://www.lynda.com/MyPlaylist/Watch/16095925/683038?autoplay=true)  
 
 - [ ] check http package docs
+
+- [ ] Plant API needs to be rewritten
